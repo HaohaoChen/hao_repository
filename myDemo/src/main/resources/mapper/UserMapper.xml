@@ -13,7 +13,6 @@
             id, username, password, age
         from user
         where username=#{userName}
-
     </select>
 
     <select id="queryAllUser" resultMap="UserMap">

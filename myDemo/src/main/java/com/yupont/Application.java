@@ -10,8 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 // Spring Boot 应用的标识
 @SpringBootApplication
-// mapper 接口类扫描包配置
-@MapperScan("com.yupont.dao")
+// mapper 接口类扫描包配置多种方式  a.@MapperScan("com.yupont.*.dao")  b.@MapperScan({"com.yupont.mybatis.dao","com.yupont.redis_mybatis.dao"})
+@MapperScan("com.yupont.*.dao")
 public class Application {
     public static void main(String[] args) {
         // 程序启动入口

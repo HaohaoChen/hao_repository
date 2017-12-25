@@ -2,7 +2,6 @@ package com.yupont.mybatis.dao;
 
 import com.yupont.mybatis.domain.User;
 import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
 
 /**
