@@ -1,7 +1,7 @@
-package com.yupont.controller;
+package com.yupont.mybatis.controller;
 
-import com.yupont.domain.User;
-import com.yupont.service.UserService;
+import com.yupont.mybatis.domain.User;
+import com.yupont.mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,13 +18,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/login/loginUser", method = RequestMethod.GET)
-    public User loginUser(@RequestParam(value = "userName", required = true) String userName ,
-                          @RequestParam(value = "passWord", required = true) String passWord){
-        return  userService.loginUser(userName,passWord);
+    @RequestMapping(value = "/user/queryUserByName", method = RequestMethod.GET)
+    public User queryUserByName(@RequestParam(value = "userName", required = true) String userName){
+        return  userService.queryUserByName(userName);
     }
 
-    @RequestMapping(value = "/login/queryAllUser", method = RequestMethod.GET)
+    @RequestMapping(value = "/user/queryAllUser", method = RequestMethod.GET)
     public List<User> loginUser(){
         return  userService.queryAllUser();
     }

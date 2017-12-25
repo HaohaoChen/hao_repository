@@ -1,8 +1,8 @@
-package com.yupont.service.impl;
+package com.yupont.mybatis.service.impl;
 
-import com.yupont.dao.UserDao;
-import com.yupont.domain.User;
-import com.yupont.service.UserService;
+import com.yupont.mybatis.dao.UserDao;
+import com.yupont.mybatis.domain.User;
+import com.yupont.mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,8 +17,8 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private UserDao userDao;
 
-    public User loginUser(String userName, String passWord) {
-        return userDao.loginUser(userName, passWord);
+    public User queryUserByName(String userName) {
+        return userDao.queryUserByName(userName);
     }
 
     public List<User> queryAllUser() {

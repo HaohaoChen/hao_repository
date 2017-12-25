@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.yupont.mybatis.dao.UserDao">
+<mapper namespace="com.yupont.redis_mybatis.dao.LoginDao">
     <resultMap id="UserMap" type="com.yupont.mybatis.domain.User">
         <result column="id" property="id" />
         <result column="username" property="userName" />
@@ -8,17 +8,11 @@
         <result column="age" property="age" />
     </resultMap>
 
-    <select id="queryUserByName" resultMap="UserMap" parameterType="java.lang.String">
+    <select id="loginUser" resultMap="UserMap" parameterType="java.lang.String">
         select
-            id, username, password, age
+        id, username, password, age
         from user
-        where username=#{userName}
+        where username=#{userName} and password=#{passWord}
 
-    </select>
-
-    <select id="queryAllUser" resultMap="UserMap">
-         select
-            id, username, password, age
-         from user
     </select>
 </mapper>

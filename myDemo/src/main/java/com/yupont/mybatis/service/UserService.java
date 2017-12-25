@@ -1,6 +1,6 @@
-package com.yupont.service;
+package com.yupont.mybatis.service;
 
-import com.yupont.domain.User;
+import com.yupont.mybatis.domain.User;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import java.util.List;
  * Created by Administrator on 2017/12/21 0021.
  */
 public interface UserService {
-    public User loginUser(String userName,String passWord);
+    public User queryUserByName(String userName);
 
     public List<User> queryAllUser();
 }

@@ -1,4 +1,4 @@
-package com.yupont.domain;
+package com.yupont.mybatis.domain;
 
 import java.io.Serializable;
 
