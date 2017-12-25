@@ -7,4 +7,8 @@ import com.yupont.mybatis.domain.User;
  */
 public interface LoginService {
     public User loginUser(String userName, String passWord);
+
+    public Integer updateUser(User user);
+
+    public Integer deleteUser(String name);
 }

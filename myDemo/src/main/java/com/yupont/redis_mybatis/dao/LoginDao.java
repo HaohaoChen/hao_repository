@@ -9,4 +9,8 @@ import org.apache.ibatis.annotations.Param;
 public interface LoginDao {
     //@Param("userName") 对应UserMapper.xml中传递的参数
     User loginUser(@Param("userName") String userName, @Param("passWord") String passWord);
+
+    Integer updateUser(User user);
+
+    Integer deleteUser(String name);
 }
