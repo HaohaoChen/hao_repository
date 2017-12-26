@@ -25,7 +25,7 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/login/deleteUser/{name}", method = RequestMethod.DELETE)
-    public void deleteUser(@PathVariable("name") String name ){
+    public void deleteUser(@PathVariable("name") String name){
         loginService.deleteUser(name);
     }
 }
